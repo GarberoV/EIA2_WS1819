@@ -14,7 +14,8 @@ namespace aufgabe0 {
 function getName(){
     
     var name = prompt("Bitte gebe deinen Namen ein:"," ");
-        document.write("Herzlich Willkommen, " ,name);      
+        document.write("Herzlich Willkommen, " ,name);  
+    console.log ("Herzlich Willkommen ", name);    
 }
     document.addEventListener('DOMContentLoaded', getName);
     
