@@ -1,5 +1,4 @@
-var Boxes;
-(function (Boxes) {
+document.addEventListener('DOMContentLoaded', function () {
     let n = 5;
     let c;
     let x = 0;
@@ -38,5 +37,5 @@ var Boxes;
         s.left = _x + "px";
         s.top = _y + "px";
     }
-})(Boxes || (Boxes = {}));
+});
 //# sourceMappingURL=Boxes.js.map
