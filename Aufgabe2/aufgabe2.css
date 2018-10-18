@@ -1,0 +1,66 @@
+/* 
+Aufgabe: 2, UNO
+Name: Veronika Garbero
+Matrikel: 256581
+Datum: 18.10.2018
+
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
+
+
+/* Karten */
+
+ul.blue {
+		border: 1px solid #0099ff;
+		border-radius: 15px;
+		float: left;
+		max-width: 13%;
+    	margin: 5% 5% 5% 5%;
+		background: #0099ff;
+		position: relative;
+		/*box-shadow: 1px 5px 10px 6px #0099ff;*/
+}
+
+ul.yellow {
+		border: 1px solid #ffcc00;
+		border-radius: 15px;
+		float: left; 
+		max-width: 13%;
+    	margin: 5% 5% 5% 0%;
+		background:#ffcc00;
+		position: relative;
+		/*box-shadow: 1px 5px 10px 6px #0099ff;*/
+}
+
+ul.red {
+		border: 1px solid #ff0000;
+		border-radius: 15px;
+		float: left;
+		max-width: 13%;
+    	margin: 5% 5% 5% 0%;
+		background:#ff0000;
+		position: relative;
+		/*box-shadow: 1px 5px 10px 6px #0099ff;*/
+}
+
+ul.green {
+		border: 1px solid #00b300;
+		border-radius: 15px;
+		float: left;
+		max-width: 13%;
+    	margin: 5% 5% 5% 0%;
+		background:#00b300;
+		position: relative;
+		/*box-shadow: 1px 5px 10px 6px #0099ff;*/
+}
+	
+	
+li {
+		list-style-type: none;
+		font-size: 12em;
+		padding-right: 40%;
+		text-align: center;
+	    color: #ffffff;
+}
