@@ -8,13 +8,8 @@ Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
 nicht kopiert und auch nicht diktiert.
 */
-var aufgabe0;
-(function (aufgabe0) {
-    function getName() {
-        var name = prompt("Bitte gebe deinen Namen ein:", " ");
-        document.write("Herzlich Willkommen, ", name);
-        console.log("Herzlich Willkommen ", name);
-    }
-    document.addEventListener('DOMContentLoaded', getName);
-})(aufgabe0 || (aufgabe0 = {}));
+function getName() {
+    var name = prompt("Bitte gebe deinen Namen ein:", " ");
+    document.write("Herzlich Willkommen, ", name);
+}
 //# sourceMappingURL=Aufgabe0.js.map
