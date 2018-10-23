@@ -2,19 +2,17 @@
 Aufgabe: 2, UNO
 Name: Veronika Garbero
 Matrikel: 256581
-Datum: 18.10.2018
+Datum: 23.10.2018
 
 Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
 nicht kopiert und auch nicht diktiert.
 */
 
-
+namespace a2 {
+    function UNO() {
     
-namespace A2 {
-   function UNO() {
-    
-   interface card {
+    interface card {
             name: string;
             blue: number;
             red: number;
@@ -133,8 +131,8 @@ namespace A2 {
     
         let allcards: card[] = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, cdirection, cexpose, cplus2]; // Array der Karten ohne Wunschkarten
         let color: string = ""; // color wird als string festgelegt 
- 
     
+            /* Eingabefenster für Nutzer */
             let x: number;
             let input: string = prompt("Bitte gebe die Anzahl deiner gewuenschten Karten ein:"); // Eingabefenster für die gewünschte Anzahl an Karten
             x = Number(input);
@@ -143,7 +141,8 @@ namespace A2 {
             return Math.floor(Math.random() * Math.floor(n)); // Math.floor = rundet den Wert von n auf die nächste ganze Zahl AB... Math.random gibt eine zufällige Zahl zw. 0 und 1 zurück
             };
     
-       
+    
+    
         function createCard(_color: string, _n: string, _x: number): void { // Karten werden hier erstellt
                 let div: HTMLDivElement = document.createElement("div");
                 document.body.appendChild(div); // dem HTML-Element <body> wird ein div hinzugefügt
@@ -152,16 +151,17 @@ namespace A2 {
 
                 let s: CSSStyleDeclaration = div.style; //Karten werden hier gestaltet
                 s.fontSize = 20 + "px";
+                s.fontFamily = "Kite One, sans-serif"; 
                 s.border = "solid white";
                 s.paddingTop = 110 + "px";
                 s.textAlign = "center";
                 s.position = "absolute";
                 s.backgroundColor = _color;
-                s.width = 150 + "px";
+                s.width = 155 + "px";
                 s.height = 150 + "px";
                 s.bottom = 35+ "px";
-                s.left = (_x + 0.2) * 120 + "px";
-                s.borderRadius = 10 + "px";
+                s.left = (_x + 0.53) * 120 + "px";
+                s.borderRadius = 10+ "px";
 
                 if (color == "#000000") { //Schriftfarbe wird weiss bei schwarzem Hintergrund
                     s.color = "white";
@@ -235,53 +235,8 @@ namespace A2 {
 
                 }
             }
-       
-            function kartendeck() { // Kartendeck wird erstellt 
-                let div = document.createElement("div");
-                document.body.appendChild(div);
-                div.setAttribute("id", "Kartendeck");
-                document.getElementById("Kartendeck").innerHTML += "Kartendeck";
-                let s = div.style;
-                s.fontSize = 20 +"px";
-                s.border = "thin solid black";
-                s.textAlign = "center";
-                s.position = "abolsute";
-                s.paddingTop = 120 + "px";
-                s.backgroundColor = "#0000000";
-                s.width = 150 + "px";
-                s.height = 120 + "px";
-                s.left = 20 + "px";
-                s.top = 25 + "px";
-                s.borderRadius = 10 + "px";
-            }
-
-            function ablagestapel() { // Ablagestapel wird erstellt
-                let div = document.createElement("div");
-                document.body.appendChild(div);
-                div.setAttribute("id", "Ablagestapel");
-                document.getElementById("Ablagestapel").innerHTML += "Ablagestapel";
-                let s = div.style;
-                s.fontSize= 20 + "px";
-                s.border = "thin solid black";
-                s.paddingTop = 30 + "px";
-                s.color = "black"
-                s.textAlign = "center";
-                s.position = "absolute";
-                s.backgroundColor = "#0000000";
-                s.width = 150 + "px";
-                s.height = 220 + "px";
-                s.left = 250 + "px";
-                s.top = 25 + "px";
-                s.borderRadius = 10 + "px";
-            }
+      }
     
-   
-            ablagestapel();
-            kartendeck();
- }
-
-        document.addEventListener("DOMContentLoaded", (UNO));
-
-
+     document.addEventListener("DOMContentLoaded", (UNO));
+    
 }
-

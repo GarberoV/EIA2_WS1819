@@ -1,0 +1,69 @@
+/*
+Aufgabe: 2, UNO
+Name: Veronika Garbero
+Matrikel: 256581
+Datum: 23.10.2018
+
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
+
+		@import 
+		url('https://fonts.googleapis.com/css?family=Catamaran|Harmattan|Kite+One|Pavanam');
+		
+		
+		
+html {
+	background-color: #e0ebeb;
+}
+
+#deck {
+	position: relative;
+	height: 20px;
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	font-family: 'Kite One', sans-serif;
+	border: 3px solid white;
+	border-radius: 6%;
+	padding: 9% 9% 10% 1%;
+	margin: 3% 0% 0% 4%;
+	max-width: 38px;
+	text-align: center;
+	float: left;
+}
+
+
+#ablage {
+	position: relative;
+	height: 20px;
+	background-color: black;
+	color: white;
+	font-size: 27px;
+	font-family: 'Kite One', sans-serif;
+	border: 3px solid white;
+	border-radius: 6%;
+	padding: 9% 9% 10% 1%;
+	margin: 3% 0% 0% 13%;
+	max-width: 38px;
+	text-align: center;
+	float: left;
+}
+
+
+/*#hand {
+	position: relative;
+	height: 20px;
+	background-color: black;
+	color: white;
+	font-size: 27px;
+	font-family: 'Kite One', sans-serif;
+	border: 3px solid white;
+	border-radius: 6%;
+	padding: 9% 9% 12% 4%;
+	margin: 3% 0% 0% 13%;
+	max-width: 38px;
+	text-align: center;
+	float: left;
+}*/

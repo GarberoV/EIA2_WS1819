@@ -2,14 +2,14 @@
 Aufgabe: 2, UNO
 Name: Veronika Garbero
 Matrikel: 256581
-Datum: 18.10.2018
+Datum: 23.10.2018
 
 Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
 nicht kopiert und auch nicht diktiert.
 */
-var A2;
-(function (A2) {
+var a2;
+(function (a2) {
     function UNO() {
         let c0 = {
             name: "0",
@@ -106,6 +106,7 @@ var A2;
         let cwishplus4 = 4; // 4 Wunschkarten +4 ziehen
         let allcards = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, cdirection, cexpose, cplus2]; // Array der Karten ohne Wunschkarten
         let color = ""; // color wird als string festgelegt 
+        /* Eingabefenster f�r Nutzer */
         let x;
         let input = prompt("Bitte gebe die Anzahl deiner gewuenschten Karten ein:"); // Eingabefenster f�r die gew�nschte Anzahl an Karten
         x = Number(input);
@@ -120,15 +121,16 @@ var A2;
             document.getElementById("a" + _x).innerHTML += _n;
             let s = div.style; //Karten werden hier gestaltet
             s.fontSize = 20 + "px";
+            s.fontFamily = "Kite One, sans-serif";
             s.border = "solid white";
             s.paddingTop = 110 + "px";
             s.textAlign = "center";
             s.position = "absolute";
             s.backgroundColor = _color;
-            s.width = 150 + "px";
+            s.width = 155 + "px";
             s.height = 150 + "px";
             s.bottom = 35 + "px";
-            s.left = (_x + 0.2) * 120 + "px";
+            s.left = (_x + 0.53) * 120 + "px";
             s.borderRadius = 10 + "px";
             if (color == "#000000") {
                 s.color = "white";
@@ -196,46 +198,7 @@ var A2;
                 }
             }
         }
-        function kartendeck() {
-            let div = document.createElement("div");
-            document.body.appendChild(div);
-            div.setAttribute("id", "Kartendeck");
-            document.getElementById("Kartendeck").innerHTML += "Kartendeck";
-            let s = div.style;
-            s.fontSize = 20 + "px";
-            s.border = "thin solid black";
-            s.textAlign = "center";
-            s.position = "abolsute";
-            s.paddingTop = 120 + "px";
-            s.backgroundColor = "#0000000";
-            s.width = 150 + "px";
-            s.height = 120 + "px";
-            s.left = 20 + "px";
-            s.top = 25 + "px";
-            s.borderRadius = 10 + "px";
-        }
-        function ablagestapel() {
-            let div = document.createElement("div");
-            document.body.appendChild(div);
-            div.setAttribute("id", "Ablagestapel");
-            document.getElementById("Ablagestapel").innerHTML += "Ablagestapel";
-            let s = div.style;
-            s.fontSize = 20 + "px";
-            s.border = "thin solid black";
-            s.paddingTop = 30 + "px";
-            s.color = "black";
-            s.textAlign = "center";
-            s.position = "absolute";
-            s.backgroundColor = "#0000000";
-            s.width = 150 + "px";
-            s.height = 220 + "px";
-            s.left = 250 + "px";
-            s.top = 25 + "px";
-            s.borderRadius = 10 + "px";
-        }
-        ablagestapel();
-        kartendeck();
     }
     document.addEventListener("DOMContentLoaded", (UNO));
-})(A2 || (A2 = {}));
+})(a2 || (a2 = {}));
 //# sourceMappingURL=a2.js.map
