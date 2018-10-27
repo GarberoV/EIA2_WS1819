@@ -10,6 +10,8 @@ nicht kopiert und auch nicht diktiert.
 */
 
 namespace a2 {
+    
+        
     function UNO() {
     
     interface card {
@@ -26,7 +28,7 @@ namespace a2 {
             red: 1,    // Anzahl, Karte in rot
             blue: 1,   // Anzahl, Karte in blau
             yellow: 1  // Anzahl, Karte in gelb
-
+            
         }
     
     let c1: card = {
@@ -35,6 +37,7 @@ namespace a2 {
             red: 2,
             blue: 2,
             yellow: 2
+            
         }
 
         let c2: card = {
@@ -146,8 +149,8 @@ namespace a2 {
         function createCard(_color: string, _n: string, _x: number): void { // Karten werden hier erstellt
                 let div: HTMLDivElement = document.createElement("div");
                 document.body.appendChild(div); // dem HTML-Element <body> wird ein div hinzugefügt
-                div.setAttribute("id", "a" + _x) // fügt das angegebene Attribut einem Element hinzu und gibt ihm den angegebenen Wert
-                document.getElementById("a" + _x).innerHTML += _n; 
+                div.setAttribute("id", "hand" + _x) // fügt das angegebene Attribut einem Element hinzu und gibt ihm den angegebenen Wert
+                document.getElementById("hand" + _x).innerHTML += _n; 
 
                 let s: CSSStyleDeclaration = div.style; //Karten werden hier gestaltet
                 s.fontSize = 20 + "px";
@@ -176,7 +179,7 @@ namespace a2 {
                     createCard(color, "+4", i);
                     continue; //springt wieder zum Anfang der for-schleife
                 }
-                 else if (l == 13 && cwish<= 0) { //farbige Karten
+                 else if (l == 13 && cwish <= 0) { //farbige Karten
                     i--;
                     continue;
                 }

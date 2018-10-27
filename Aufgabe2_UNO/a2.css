@@ -15,7 +15,13 @@ nicht kopiert und auch nicht diktiert.
 		
 		
 html {
-	background-color: #e0ebeb;
+	background-color: #f6f6f6;
+}
+
+body {
+	height:630px;
+	background: linear-gradient(to bottom, #c1c1bf 50% , #dfdccd 50%);
+	background-repeat: no-repeat;
 }
 
 #deck {
@@ -32,6 +38,7 @@ html {
 	max-width: 38px;
 	text-align: center;
 	float: left;
+	top: -25px;
 }
 
 
@@ -49,21 +56,7 @@ html {
 	max-width: 38px;
 	text-align: center;
 	float: left;
+	top: -25px;
 }
 
 
-/*#hand {
-	position: relative;
-	height: 20px;
-	background-color: black;
-	color: white;
-	font-size: 27px;
-	font-family: 'Kite One', sans-serif;
-	border: 3px solid white;
-	border-radius: 6%;
-	padding: 9% 9% 12% 4%;
-	margin: 3% 0% 0% 13%;
-	max-width: 38px;
-	text-align: center;
-	float: left;
-}*/

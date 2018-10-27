@@ -117,8 +117,8 @@ var a2;
         function createCard(_color, _n, _x) {
             let div = document.createElement("div");
             document.body.appendChild(div); // dem HTML-Element <body> wird ein div hinzugef�gt
-            div.setAttribute("id", "a" + _x); // f�gt das angegebene Attribut einem Element hinzu und gibt ihm den angegebenen Wert
-            document.getElementById("a" + _x).innerHTML += _n;
+            div.setAttribute("id", "hand" + _x); // f�gt das angegebene Attribut einem Element hinzu und gibt ihm den angegebenen Wert
+            document.getElementById("hand" + _x).innerHTML += _n;
             let s = div.style; //Karten werden hier gestaltet
             s.fontSize = 20 + "px";
             s.fontFamily = "Kite One, sans-serif";
