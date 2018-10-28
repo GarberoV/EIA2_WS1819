@@ -2,7 +2,7 @@
 Aufgabe: 2, UNO
 Name: Veronika Garbero
 Matrikel: 256581
-Datum: 23.10.2018
+Datum: 25.10.2018
 
 Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
