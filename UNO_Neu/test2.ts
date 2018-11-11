@@ -1,8 +1,8 @@
 /*
-Aufgabe: 2, UNO
+Aufgabe: 3, UNO Events
 Name: Veronika Garbero
 Matrikel: 256581
-Datum: 07.11.2018
+Datum: 09.11.2018
 
 Hiermit versichere ich, dass ich diesen
 Code selbst geschrieben habe. Er wurde
