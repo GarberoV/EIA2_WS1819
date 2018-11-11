@@ -183,7 +183,7 @@ namespace a2 {
                     i--;
                     continue;
                 }
-                else {
+                else {i
                     if (l == 14 && cwishplus4 > 0) { // Wunschkarte + 4 ziehen
                         color = "#000000";
                         cwishplus4--;

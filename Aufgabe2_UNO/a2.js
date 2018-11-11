@@ -149,6 +149,7 @@ var a2;
                 continue;
             }
             else {
+                i;
                 if (l == 14 && cwishplus4 > 0) {
                     color = "#000000";
                     cwishplus4--;
