@@ -1,0 +1,263 @@
+<!--
+Aufgabe: Aufgabe 10, FormElements: Weihnachtsbaumkonfigurator
+Name: Veronika Garbero
+Matrikel: 256581
+Datum: 30.12.2017
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+ -->
+
+<!DOCTYPE html>
+
+<html lang="de">
+
+	<head>
+		<title>A10 Weihnachtsbaumkonfigurator</title>
+		<meta charset="utf-8">
+		
+		 <link rel="stylesheet" type="text/css" href="A10-Test2.css">
+		 <link rel="stylesheet" type="text/css" href="Online-Formular.css">
+		 
+		 <script src="A10-Test2.js"></script>
+		 
+	</head>
+	
+	<body>
+	
+	 <header>
+           <!-- Fixed Menu -->
+		   <div id="navbar">
+		   
+		   <h1>Weihnachtsbaumkonfigurator</h1>
+		   
+		   <img id="warenkorb" src="basket.png" alt="warenkorb">  <!--  Warenkorb -->
+
+		   
+		   <div class="dropdown">
+		   
+		   <img class="imglogin" src="login.png" alt="Login">  <!--  Login Icon -->
+		   
+		   <div class="dropdown-content"> <!--  Login Bereich -->
+    	   <a href="https://GarberoV.github.io/EIA2_alt/A10_Test/Login.html" class="button"><span>Login</span></a>
+    	   
+    	   
+  		   </div>
+		   </div>	
+		   </div>		
+   
+	  </header>
+	  
+	  <!-- Verschiedene Baumarten -->
+	  
+	  <h1 class="baumarten"> Verschiedene Baumarten:</h1>
+	  
+	 <fieldset id="fieldset1">  <!---------------------------- Weisser Weihnachtsbaum -->
+	
+	 	<img class="baum1" src="baumWeiss.jpg" alt="baum1">  
+		<input type="radio" name="Radiogroup1" value="radio1" id="radio1" checked/>
+		<label for="radio1">Weisser Weihnachtsbaum</label>
+	
+	
+	  							<!---------------------------- Berkshire Bergtanne -->
+	  							
+	    <img class="baum2" src="baum2.png" alt="baum2">
+		<input type="radio" name="Radiogroup1" value="radio2" id="radio2" checked/>
+		<label for="radio2">Berkshire Bergtanne</label>
+
+	
+	  							<!---------------------------- Alpen Weihnachtsbaum -->
+	  							
+	    <img class="baum3" src="baum3.jpg" alt="baum3">
+		<input type="radio" name="Radiogroup1" value="radio3" id="radio3" checked/>
+		<label for="radio3">Alpen Weihnachtsbaum</label>
+
+	
+	  							<!---------------------------- Nordmanntanne -->
+	  							
+		<img class="baum4" src="baum4.jpg" alt="baum4">
+		<input type="radio" name="Radiogroup1" value="radio4" id="radio4" checked/>
+		<label for="radio4">Nordmanntanne</label>
+	 </fieldset>
+	
+	
+	
+	<!-- Schmuckartikel -->
+	
+	 <h1 class="schmuckartikel"> Schmuckartikel:</h1>
+	 
+	 <fieldset id="checkbox1">
+									<!---------------------------- Kugeln einfarbig -->
+		<legend> Einfarbige Kugeln </legend>  
+		
+									<!---------------------------- Rosa Kugel -->
+	    <img class="kugel1" src="kugel4.jpg" alt="rosa">				
+		<input type="checkbox" name="Checkbox1" value="check1" id="check1"/>
+		<label for="check1">Rosa</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Schwarze Kugel -->
+		<img class="kugel2" src="schwarz.jpg" alt="schwarz">						
+		<input type="checkbox" name="Checkbox2" value="check2" id="check2"/>
+		<label for="check2">Schwarz</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Silber Kugel -->
+		<img class="kugel3" src="herz.jpg" alt="silber">				
+		<input type="checkbox" name="Checkbox3" value="check3" id="check3"/>
+		<label for="check3">Silber</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+	</fieldset>  
+	
+	    <fieldset id="checkbox2">
+	   								<!---------------------------- Kugeln mit Muster -->
+		<legend> Kugeln mit Muster  </legend>
+									<!---------------------------- Grüne Kugel -->
+	    <img class="kugel4" src="grün.jpg" alt="grün">						
+		<input type="checkbox" name="Checkbox4" value="check4" id="check4"/>
+		<label for="check4">Grün</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Rote Kugel -->
+		<img class="kugel5" src="kugel2.png" alt="rot">								
+		<input type="checkbox" name="Checkbox5" value="check5" id="check5"/>
+		<label for="check5">Rot</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Blaue Kugel -->
+		<img class="kugel6" src="kugel5.jpg" alt="blau">							
+		<input type="checkbox" name="Checkbox6" value="check6" id="check6"/>
+		<label for="check6">Blau</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Feder Kugel -->
+		<img class="kugel7" src="kugel1.jpg" alt="feder">							
+		<input type="checkbox" name="Checkbox7" value="check7" id="check7"/>
+		<label for="check7">Feder</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Rot-Glitzer Kugel -->
+		<img class="kugel8" src="rot-glitzer.jpg" alt="rot-glitzer">							
+		<input type="checkbox" name="Checkbox8" value="check8" id="check8"/>
+		<label for="check8">Rot-Glitzer</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+	</fieldset> 
+	
+	
+	<fieldset id="checkbox3">
+									<!---------------------------- Schleifen -->
+		<legend> Schleifen </legend>
+									<!---------------------------- Weiss-Blaue Schleife -->
+	    <img class="schleife1" src="schleife1.jpg" alt="weiss-blau">						
+		<input type="checkbox" name="Checkbox9" value="check9" id="check9"/>
+		<label for="check9">Weiss-Blau</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+									<!---------------------------- Rote Schleife -->
+		<img class="schleife2" src="schleife2.jpg" alt="rot">								
+		<input type="checkbox" name="Checkbox10" value="check10" id="check10"/>
+		<label for="check10">Rot</label>
+		
+		Anzahl <!--  Anzahl Artikel -->
+		<input type="number" name="Stepper" step="1" min="0" max="100" value="0"/>
+		<hr/>
+		
+		</fieldset>
+		
+									<!---------------------------- Lichterketten -->
+									
+		<h1 class="lichterketten">Lichterketten:</h1>
+		<select name="Select" id="select">
+			<option value="option1" selected>Kerzen</option>
+			<option value="option2">LED</option>
+		</select>
+		<hr/>
+		
+	 
+	 <!-- Halterungen -->
+	 
+	 <h1 class="halterungen"> Halterungen:</h1>
+	  
+	<fieldset id="fieldset2">  <!---------------------------- Gusseisen-Halterung -->
+		<img class="halterung1" src="Gusseisen.jpg" alt="gusseisen"> 
+		<input type="radio" name="Radiogroup" value="radio4" id="radio4" checked/>
+		<label for="radio4">Gusseisen</label>
+	
+	
+								<!------------------------------ Aluminiumguss-Halterung -->
+		<img class="halterung2" src="Aluminiumguss.png" alt="aluminiumguss">
+		<input type="radio" name="Radiogroup" value="radio5" id="radio5" checked/>
+		<label for="radio5">Aluminiumguss</label>
+	</fieldset>
+	
+	
+	<!-- Lieferadresse -->
+	
+	
+	<fieldset id="lieferadresse">
+	
+				<h1 id="adresse"> Lieferadresse: </h1>
+				
+				Name
+				<input type="text" name="Name" placeholder="Anna" required id="name"/>
+				<hr />
+				Vorname
+				<input type="text" name="Vorname" placeholder="Rivera" required id="vorname"/>
+				<hr />
+				Straße &amp; Hausnummer
+				<input type="text" name="Straße" placeholder="Furtwänglerstraße 9" required id="strasse"/>
+				<hr />
+				Postleitzahl
+				<input type="text" name="PLZ" placeholder="70163" required id="PLZ"/>
+				<hr />
+				Ort
+				<input type="text" name="Ort" placeholder="Stuttgart" required id="ort"/>
+			</fieldset>
+			
+			
+			<!-- Lieferoptionen -->
+									
+		<h1 class="lieferoptionen">Lieferoptionen:</h1>
+		<select name="Select" id="selectopt">
+			<option value="option1" selected>Standard-Lieferung (3 Werktage)</option>
+			<option value="option2">Express-Lieferung (Lieferung am nächsten Werktag)</option>
+		</select>
+		<hr/>
+	 
+	 <div id="output"></div>
+		
+	 
+	  
+	</body>
+	
+	</html>
+	
