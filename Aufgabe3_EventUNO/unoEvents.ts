@@ -13,8 +13,8 @@ namespace a3 {
     
 //################################## Eventlistener hinzufügen
 
-    document.addEventListener("DOMContentLoaded", kartenAnzahl);
-    document.addEventListener("keydown", pressKeyboard);
+    document.addEventListener("DOMContentLoaded", kartenAnzahl); // Wenn Eingabefenster erscheint, ist DOM geladen
+    document.addEventListener("keydown", pressKeyboard); // Klick auf Leertaste
     
 //################################## Variablen
 
@@ -34,12 +34,12 @@ namespace a3 {
 
     function kartenAnzahl(): void {
         var kartenanzahl: string = prompt("Bitte gebe die Anzahl deiner gewuenschten Karten ein:");
-        let n: number = parseInt(kartenanzahl);
+        let n: number = parseInt(kartenanzahl); // Gibt einen String als Zahl zurück
 
         randomCard(n);
-        displayHand();
+        displayHand(); // Funktion weiter unten
 
-        let button: HTMLElement = document.getElementById("sortbutton");
+        let button: HTMLElement = document.getElementById("sortbutton"); 
         button.addEventListener("click",sortHandcards);
 
         let draw: HTMLElement = document.getElementById("deck");
@@ -51,9 +51,9 @@ namespace a3 {
     
      for (let i: number = 0; i < colors.length; i++) {
         for (let j: number = 0; j < values.length; j++) {
-            for (let k: number = 0; k < 2; k++) {
-                let card: Cards = { color: colors[i], value: values[j]};
-                deck.push(card);
+            for (let k: number = 0; k < 2; k++) {   // k < 2, weil 2 schwarze Karten
+                let card: Cards = { color: colors[i], value: values[j]}; 
+                deck.push(card);  
             }
         }
     }
@@ -67,11 +67,11 @@ namespace a3 {
         for (let b: number = 0; b < handcards.length; b++) {
             let div: HTMLElement = document.createElement("div");
             document.getElementById("Handcards").appendChild(div);
-            div.innerHTML = handcards[b].value;
-            let id: string = b.toString();
+            div.innerHTML = handcards[b].value;  // Den Handkarten werden Werte hinzugefügt
+            let id: string = b.toString();  // Gibt einen String als Objekt zurück
             div.setAttribute("id", id);
             div.classList.add("Handcards");
-            div.classList.add(handcards[b].color);
+            div.classList.add(handcards[b].color); // Den Karten werden Farben hinzugefügt, add = fügt angegebene Klassenwerte hinzu
             // EventListener für Karte ablegen
             div.addEventListener("click", PlayCard);
 
@@ -136,7 +136,7 @@ namespace a3 {
 
     
     function pressKeyboard(_event: KeyboardEvent): void {
-        if (_event.keyCode == 32) { // 32 ist der Wert fÃ¼r space, jede Taste hat einen anderen Wert
+        if (_event.keyCode == 32) { // 32 ist der Wert für space, jede Taste hat einen anderen Wert
             drawFromDeck();
         }
     }    

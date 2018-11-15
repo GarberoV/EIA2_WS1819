@@ -11,8 +11,8 @@ nicht kopiert und auch nicht diktiert.
 var a3;
 (function (a3) {
     //################################## Eventlistener hinzuf�gen
-    document.addEventListener("DOMContentLoaded", kartenAnzahl);
-    document.addEventListener("keydown", pressKeyboard);
+    document.addEventListener("DOMContentLoaded", kartenAnzahl); // Wenn Eingabefenster erscheint, ist DOM geladen
+    document.addEventListener("keydown", pressKeyboard); // Klick auf Leertaste
     let colors = ["red", "blue", "green", "yellow"];
     let values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "X", "<=>"];
     let deck = [{ color: "red", value: "0" }, { color: "blue", value: "0" }, { color: "green", value: "0" }, { color: "yellow", value: "0" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "Wunschfarbe" }, { color: "black", value: "Wunschfarbe" }, { color: "black", value: "Wunschfarbe" }, { color: "black", value: "Wunschfarbe" }];
@@ -21,9 +21,9 @@ var a3;
     //################################## Nutzer-Eingabe
     function kartenAnzahl() {
         var kartenanzahl = prompt("Bitte gebe die Anzahl deiner gewuenschten Karten ein:");
-        let n = parseInt(kartenanzahl);
+        let n = parseInt(kartenanzahl); // Gibt einen String als Zahl zur�ck
         randomCard(n);
-        displayHand();
+        displayHand(); // Funktion weiter unten
         let button = document.getElementById("sortbutton");
         button.addEventListener("click", sortHandcards);
         let draw = document.getElementById("deck");
@@ -45,11 +45,11 @@ var a3;
         for (let b = 0; b < handcards.length; b++) {
             let div = document.createElement("div");
             document.getElementById("Handcards").appendChild(div);
-            div.innerHTML = handcards[b].value;
-            let id = b.toString();
+            div.innerHTML = handcards[b].value; // Den Handkarten werden Werte hinzugef�gt
+            let id = b.toString(); // Gibt einen String als Objekt zur�ck
             div.setAttribute("id", id);
             div.classList.add("Handcards");
-            div.classList.add(handcards[b].color);
+            div.classList.add(handcards[b].color); // Den Karten werden Farben hinzugef�gt, add = f�gt angegebene Klassenwerte hinzu
             // EventListener f�r Karte ablegen
             div.addEventListener("click", PlayCard);
         }
