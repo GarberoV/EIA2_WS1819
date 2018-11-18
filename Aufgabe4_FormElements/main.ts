@@ -229,7 +229,7 @@ namespace a4 {
             }
         }
 
-//################################## Button Bestellung prÃ¼fen
+//################################## Button Bestellung prüfen
         
         let button: HTMLDivElement = <HTMLDivElement>document.getElementById("button");
         let submit: HTMLButtonElement = document.createElement("button");
@@ -303,7 +303,7 @@ namespace a4 {
         warenkorb.innerHTML += "<hr> Gesamtkosten: " + Math.round(gesamtkosten * 100) / 100 + "0â‚¬";
     }
 
-//################################## Eingegebene Daten prÃ¼fen
+//################################## Eingegebene Daten prüfen
     
     function handleMouseDown(_event: MouseEvent): void {
         let pruefen: HTMLDivElement = document.createElement("div");

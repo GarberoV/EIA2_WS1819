@@ -193,7 +193,7 @@ var a4;
                 lieferopt.appendChild(label3);
             }
         }
-        //################################## Button Bestellung prüfen
+        //################################## Button Bestellung pr�fen
         let button = document.getElementById("button");
         let submit = document.createElement("button");
         submit.name = "Button";
@@ -251,7 +251,7 @@ var a4;
         }
         warenkorb.innerHTML += "<hr> Gesamtkosten: " + Math.round(gesamtkosten * 100) / 100 + "0€";
     }
-    //################################## Eingegebene Daten prüfen
+    //################################## Eingegebene Daten pr�fen
     function handleMouseDown(_event) {
         let pruefen = document.createElement("div");
         pruefen.style.paddingBottom = "1em";
