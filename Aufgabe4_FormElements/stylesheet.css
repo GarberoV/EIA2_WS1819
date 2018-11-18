@@ -12,14 +12,16 @@ nicht kopiert und auch nicht diktiert.
 		url('https://fonts.googleapis.com/css?family=Satisfy');
 		@import 
 		url('https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald');
+		
 
 body {
 	float: left;
 	font-family: "Arial";
 	background-color: grey;
-	font-size: 1em;
+	font-size: 15px;
 	width: 100%;
 	margin-left: 4em;
+
 }
 
 legend {
@@ -94,7 +96,9 @@ button {
     cursor: pointer;
 }
 
-button:hover	{box-Shadow: 0px 0px 8px #87EBFF;}
+button:hover {
+	box-Shadow: 0px 0px 8px #87EBFF;
+}
 
 
 #daten input {
@@ -137,3 +141,66 @@ img[alt="boom"] {
 				top: 2%;
 				}
    
+   
+/* Schneeflocken */
+
+.snow1 {
+	background: url("pics/snow.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 1950px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: animateOne 10s infinite linear;
+	z-index: -1;
+}
+
+.snow2 {
+	background: url("pics/snow2.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 1950px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: animateTwo 10s infinite linear;
+	z-index: -2;
+	background-size: 300px;
+}
+
+.snow3 {
+	background: url("pics/snow3.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 1950px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: animateThree 10s infinite linear;
+	z-index: -3;
+	background-size: 600px;
+}
+
+@keyframes animateOne {
+	0% {
+	background-position: 0px 0px }
+	100% {
+	background-position: 100px 650px}
+}
+
+@keyframes animateTwo {
+	0% {
+	background-position: 0px -100px }
+	100% {
+	background-position: 0px 650px}
+}
+
+@keyframes animateThree {
+	0% {
+	background-position: 0px 100px }
+	100% {
+	background-position: 300px 650px}
+}
+
+
