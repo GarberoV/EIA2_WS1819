@@ -1,0 +1,206 @@
+/*
+Aufgabe: Aufgabe 5, WKB Assoziative Arrays
+Name: Veronika Garbero
+Matrikel: 256581
+Datum: 23.11.2018
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
+
+		@import 
+		url('https://fonts.googleapis.com/css?family=Satisfy');
+		@import 
+		url('https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald');
+		
+
+body {
+	float: left;
+	font-family: "Arial";
+	background-color: grey;
+	font-size: 15px;
+	width: 100%;
+	margin-left: 4em;
+
+}
+
+legend {
+	font-family: 'Satisfy', cursive;
+	font-size: 25px;
+	text-shadow: 3px 2px 4px #87EBFF;
+}
+
+h1 {
+	font-family: 'Satisfy', cursive;
+	font-size: 4em;
+	position: relative;
+	top: -30%;
+	left: 1%;	
+	text-shadow: 3px 2px 4px #87EBFF;
+}
+				
+
+input:invalid {
+	background: black;
+	color: red;
+	box-Shadow: 0px 0px 8px red;
+}
+
+input:valid {	
+	background-color: black;
+	color: #87EBFF;
+	box-Shadow: 0px 0px 8px #87EBFF;
+}
+
+option {	
+	background-color: black;
+	color: #87EBFF;
+	box-Shadow: 0px 0px 8px #87EBFF;
+}
+
+label::after {
+	display: block;
+}
+
+input {
+	margin: 0.5em;
+
+}
+
+.baum {
+	position: relative;
+	margin-right: 10px;
+	border: thin solid grey;
+}
+
+.halter {
+	position: relative;
+	margin-right: 10px;
+	border: thin solid grey;
+}
+
+.lichter {
+	position: relative;
+	margin-right: 10px;
+	border: thin solid grey;
+}
+
+button {
+	background-color: black;
+	color: #87EBFF;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5em;
+    margin-left: 3em;
+    border-radius: 8em;
+    cursor: pointer;
+}
+
+button:hover {
+	box-Shadow: 0px 0px 8px #87EBFF;
+}
+
+
+#daten input {
+	display: block;
+	height: 10%;
+	width: 50%;
+}
+
+fieldset {
+	width: 500px;
+	height: auto;
+}
+
+/*img[alt="Weiss"]:hover, img[alt="Berkshire"]:hover, img[alt="Alpen"]:hover, img[alt="Nordmann"]:hover {
+	box-Shadow: 0px 0px 8px #87EBFF;
+}*/
+
+img:hover {
+	box-Shadow: 0px 0px 8px #87EBFF;
+}
+
+#bestellung {
+	position: fixed;
+	right: 10%;
+	bottom: 5%;
+	color: #87EBFF;
+	padding: 2em;
+	box-Shadow: 0px 5px 15px #87EBFF;
+	border-radius: 8em;
+	text-align: center
+}
+
+#einkaufszettel {
+	font-size: 2em;
+}
+
+img[alt="boom"] {
+				position: fixed;
+				right: 14%;
+				top: 2%;
+				}
+   
+   
+/* Schneeflocken */
+
+.snow1 {
+	background: url("pics/snow.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 1950px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: animateOne 10s infinite linear;
+	z-index: -1;
+}
+
+.snow2 {
+	background: url("pics/snow2.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 1950px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: animateTwo 10s infinite linear;
+	z-index: -2;
+	background-size: 300px;
+}
+
+.snow3 {
+	background: url("pics/snow3.png");
+	background-repeat: repeat;
+	width: 100%;
+	height: 1950px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: animateThree 10s infinite linear;
+	z-index: -3;
+	background-size: 600px;
+}
+
+@keyframes animateOne {
+	0% {
+	background-position: 0px 0px }
+	100% {
+	background-position: 100px 650px}
+}
+
+@keyframes animateTwo {
+	0% {
+	background-position: 0px -100px }
+	100% {
+	background-position: 0px 650px}
+}
+
+@keyframes animateThree {
+	0% {
+	background-position: 0px 100px }
+	100% {
+	background-position: 300px 650px}
+}
+
+
