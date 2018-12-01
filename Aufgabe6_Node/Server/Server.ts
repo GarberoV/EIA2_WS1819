@@ -16,7 +16,7 @@ namespace L06_SendData {
     }
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void { // Parameter request ist die einkommende Nachricht und response die Antwort
-        console.log("I hear voices!"); // Konsolenausgabe
+        console.log(_request.url); // Konsolenausgabe
 
         _response.setHeader("content-type", "text/html; charset=utf-8"); // Paramenter response -> CSS Header
         _response.setHeader("Access-Control-Allow-Origin", "*"); // Eine Antwort, die dem Browser erlaubt, dass Code von einem beliebigen Ursprung auf eine Ressource zugreifen kann
