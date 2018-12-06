@@ -16,9 +16,12 @@ var L06_SendData;
     }
     function handleRequest(_request, _response) {
         console.log(_request.url); // Konsolenausgabe
+        /* let query: Url.Url = Url.parse(_request.url, true).query;*/
         let query = Url.parse(_request.url, true).query;
         _response.setHeader("content-type", "text/html; charset=utf-8"); // Paramenter response -> CSS Header
         _response.setHeader("Access-Control-Allow-Origin", "*"); // Eine Antwort, die dem Browser erlaubt, dass Code von einem beliebigen Ursprung auf eine Ressource zugreifen kann
+        /* _response.write("hallo");
+         console.log(query);*/
         for (let key in query) {
             console.log(query[key]);
             _response.write(key + ": " + query[key] + "<br>");
