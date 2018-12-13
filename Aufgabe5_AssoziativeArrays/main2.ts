@@ -16,7 +16,9 @@ namespace a5 {
     window.addEventListener("change", warenkorb);
     
 //################################## Variablen
-
+    
+    let address: string = "https://eia2w18.herokuapp.com"; // Aufgabe 7.2 
+    
     let name: HTMLInputElement;
     let strasse: HTMLInputElement;
     let hausnr: HTMLInputElement;
@@ -335,4 +337,32 @@ namespace a5 {
             document.body.appendChild(pruefen);
         }
     }
+
+//################################## Aufgabe 7.2
+        
+    function handleClick(_event: Event): void {
+        sendRequestWithCustomData();
+    }
+
+    function sendRequestWithCustomData(): void {
+        let xhr: XMLHttpRequest = new XMLHttpRequest();
+        let async: HTMLElement = document.getElementById("asyncForm");
+        let asyncForm: string = "";
+
+        
+    
+        xhr.open("GET", address + "?" + asyncForm, true);
+        xhr.addEventListener("readystatechange", handleStateChange);
+        xhr.send();
+    }
+
+    function handleStateChange(_event: ProgressEvent): void {
+        let xhr: XMLHttpRequest = <XMLHttpRequest>_event.target;
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            console.log("ready: " + xhr.readyState, " | type: " + xhr.responseType, " | status:" + xhr.status, " | text:" + xhr.statusText);
+            console.log("response: " + xhr.response);
+        }
+}
+
+
 }

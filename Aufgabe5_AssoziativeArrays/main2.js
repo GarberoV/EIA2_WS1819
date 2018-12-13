@@ -13,6 +13,7 @@ var a5;
     window.addEventListener("load", createElements);
     window.addEventListener("change", warenkorb);
     //################################## Variablen
+    let address = "https://eia2w18.herokuapp.com"; // Aufgabe 7.2 
     let name;
     let strasse;
     let hausnr;
@@ -279,6 +280,25 @@ var a5;
             pruefen.innerText = "Vielen Dank, Sie werden nun auf die Bestellseite weitegeleitet!";
             pruefen.style.color = "green";
             document.body.appendChild(pruefen);
+        }
+    }
+    //################################## Aufgabe 7.2
+    function handleClick(_event) {
+        sendRequestWithCustomData();
+    }
+    function sendRequestWithCustomData() {
+        let xhr = new XMLHttpRequest();
+        let async = document.getElementById("asyncForm");
+        let asyncForm = "";
+        xhr.open("GET", address + "?" + asyncForm, true);
+        xhr.addEventListener("readystatechange", handleStateChange);
+        xhr.send();
+    }
+    function handleStateChange(_event) {
+        let xhr = _event.target;
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            console.log("ready: " + xhr.readyState, " | type: " + xhr.responseType, " | status:" + xhr.status, " | text:" + xhr.statusText);
+            console.log("response: " + xhr.response);
         }
     }
 })(a5 || (a5 = {}));

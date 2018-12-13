@@ -3,9 +3,9 @@ import * as Url from "url";
 
 namespace L06_SendData {
 
-interface Waren {
-        [key: string]: string;
-}
+    interface Waren {
+            [key: string]: string;
+    }
     
     console.log("Starting server"); // Konsolenausgabe zum Testen
     let port: number = process.env.PORT; // Das was im PORT ist, wird in der Variable Port als Number gespeichert. 
