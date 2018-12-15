@@ -73,8 +73,8 @@ namespace a7 {
             if (artikel[i].art == "Halter") {
                 let radioB2: HTMLInputElement = document.createElement("input");
                 radioB2.type = "radio";
-                radioB2.name = "radioGroupHalterung";
-                radioB2.value = "radio2." + i;
+                radioB2.name = artikel[i].bezeichnung;
+                radioB2.value = "0";
                 radioB2.id = "radio2." + i;
                 halterung.appendChild(radioB2);
 
@@ -99,7 +99,7 @@ namespace a7 {
             if (artikel[i].art == "Beleuchtung") {
                 let checkB: HTMLInputElement = document.createElement("input");
                 checkB.type = "checkbox";
-                checkB.name = "CheckboxBeleuchtung";
+                checkB.name = artikel[i].bezeichnung;
                 checkB.value = "check";
                 checkB.id = "check" + i;
                 beleuchtung.appendChild(checkB);
@@ -112,7 +112,7 @@ namespace a7 {
 
                 let stepper: HTMLInputElement = document.createElement("input");
                 stepper.type = "number";
-                stepper.name = "StepperBeleuchtung" + i;
+                stepper.name = artikel[i].bezeichnung;
                 stepper.value = "0";
                 stepper.id = "stepper" + i;
                 stepper.min = "0";
@@ -127,6 +127,7 @@ namespace a7 {
 //################################## Schmuckartikel
         
         let schmuckartikel: HTMLDivElement = <HTMLDivElement>document.getElementById("schmuckartikel");
+       // schmuckartikel.setAttribute("class", );
         let legend4: HTMLLegendElement = document.createElement("legend"); 
         legend4.id = "Schmuck"; 
         legend4.innerText = "Schmuckartikel";
@@ -136,7 +137,7 @@ namespace a7 {
             if (artikel[i].art == "Schmuck") {
                 let checkB: HTMLInputElement = document.createElement("input");
                 checkB.type = "checkbox";
-                checkB.name = "CheckboxSchmuckartikel";
+                checkB.name = artikel[i].bezeichnung;
                 checkB.value = "check";
                 checkB.id = "check" + i;
                 schmuckartikel.appendChild(checkB);
@@ -149,7 +150,7 @@ namespace a7 {
 
                 let stepper: HTMLInputElement = document.createElement("input");
                 stepper.type = "number";
-                stepper.name = "StepperSchmuckartikel" + i;
+                stepper.name = artikel[i].bezeichnung;
                 stepper.value = "0";
                 stepper.id = "stepper" + i;
                 stepper.min = "0";
@@ -237,8 +238,8 @@ namespace a7 {
             if (artikel[i].art == "Lieferung") {
                 let radioB3: HTMLInputElement = document.createElement("input");
                 radioB3.type = "radio";
-                radioB3.name = "radioGroupLieferoptionen";
-                radioB3.value = "radio3." + i;
+                radioB3.name = artikel[i].art;
+                radioB3.value = artikel[i].bezeichnung;
                 radioB3.id = "radio3." + i;
                 lieferopt.appendChild(radioB3);
 
@@ -366,7 +367,6 @@ namespace a7 {
 
             if (input.checked == true) {
                 url += input.value + "=" + 1 + "&";
-
       
             }
             
@@ -374,9 +374,7 @@ namespace a7 {
 
         sendRequestWithCustomData();
     
-    let product: string = (<HTMLInputElement>document.querySelector(":checked")).value;
 
-    console.log(product);
     }
 
         

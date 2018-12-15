@@ -209,12 +209,14 @@ img[alt="boom"] {
 	right: 200px;
 	top: 900px;
 	border-radius: 15px;
-	color: white;
+	color: #87EBFF;
 	box-Shadow: 0px 0px 8px #87EBFF;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     width: 400px;
-	
+    border-radius: 8em;
+	text-align: center;
+	font-size: 15px;
 }
 
 
