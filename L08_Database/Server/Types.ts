@@ -9,5 +9,5 @@ interface StudentData {
 }
 
 interface Matrikelnummer {
-    matrikel: number;
-}
+matrikel: number;
+    }
