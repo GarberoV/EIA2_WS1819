@@ -15,7 +15,7 @@ var A10;
         drawSnowInfo() {
             A10.crc2.fillStyle = "#ffffff";
             A10.crc2.beginPath();
-            A10.crc2.arc(this.snowX, this.snowY, 3, 0, 2 * Math.PI);
+            A10.crc2.arc(this.snowX, this.snowY, 2, 0, 2 * Math.PI);
             A10.crc2.fill();
         }
     }

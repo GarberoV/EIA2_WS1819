@@ -23,7 +23,7 @@ namespace A10 {
         drawSnowInfo(): void {
             crc2.fillStyle = "#ffffff";
             crc2.beginPath();
-            crc2.arc(this.snowX, this.snowY, 3, 0, 2 * Math.PI);
+            crc2.arc(this.snowX, this.snowY, 2, 0, 2 * Math.PI);
             crc2.fill();
          }
     }
