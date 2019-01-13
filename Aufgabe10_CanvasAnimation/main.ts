@@ -100,7 +100,7 @@ function init(): void {
     
     // Kinder !!FEHLER!!, ich weiﬂ nicht wieso nur 1 Kind erscheint obwohl ich 15 eingegeben habe....
     
-        for (let i: number = 0; i < 15; i++) {
+       for (let i: number = 0; i < 15; i++) {
             kids[i] = new KidsInfo (0, 250,
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)",
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)");
