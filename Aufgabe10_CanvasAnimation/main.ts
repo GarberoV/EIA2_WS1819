@@ -110,7 +110,7 @@ function init(): void {
     
     
     // Kinder
-        for (let i: number = 0; i < 10; i++) {
+        for (let i: number = 0; i < 15; i++) {
             kids[i] = new KidsInfo (0, 250,
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)",
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)");
@@ -127,19 +127,7 @@ function init(): void {
     
 //------------- Funktionen  
     
-    
-// Function drawCloud 
-    
-    function drawCloud (x: number, y: number, color: string) :void {
-        crc2.beginPath();
-        crc2.arc(x, y, 18, 0, 2 * Math.PI);
-        crc2.arc(x + 15, y + 5, 15, 0, 2 * Math.PI);
-        crc2.arc(x - 15, y + 5, 15, 0, 2 * Math.PI);
-        crc2.closePath();
-        crc2.fillStyle = color;
-        crc2.fill();
-        
-    }
+
     
     
 // Function drawTree
@@ -151,18 +139,6 @@ function init(): void {
         crc2.lineTo(x - 10, y + 40);
         crc2.closePath();
         crc2.stroke();
-        crc2.fillStyle = color;
-        crc2.fill();
-            
-    }
-    
-    
-// Function drawSnowflake
-  
-    function drawSnowflake(x: number, y: number, color: string) :void {
-        crc2.beginPath();
-        crc2.arc(x, y, 2, 0, 2 * Math.PI);
-        crc2.closePath();
         crc2.fillStyle = color;
         crc2.fill();
             

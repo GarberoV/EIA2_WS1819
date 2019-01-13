@@ -76,23 +76,13 @@ var A10;
             snow[i] = new A10.SnowInfo(5 + Math.random() * 300, 20 + Math.random() * 480);
         }
         // Kinder
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 15; i++) {
             kids[i] = new A10.KidsInfo(0, 250, "hsl(" + Math.random() * 360 + ", 100%, 50%)", "hsl(" + Math.random() * 360 + ", 100%, 50%)");
         }
         img = A10.crc2.getImageData(0, 0, 300, 480);
         animate();
     }
     //------------- Funktionen  
-    // Function drawCloud 
-    function drawCloud(x, y, color) {
-        A10.crc2.beginPath();
-        A10.crc2.arc(x, y, 18, 0, 2 * Math.PI);
-        A10.crc2.arc(x + 15, y + 5, 15, 0, 2 * Math.PI);
-        A10.crc2.arc(x - 15, y + 5, 15, 0, 2 * Math.PI);
-        A10.crc2.closePath();
-        A10.crc2.fillStyle = color;
-        A10.crc2.fill();
-    }
     // Function drawTree
     function drawTree(x, y, color) {
         A10.crc2.beginPath();
@@ -101,14 +91,6 @@ var A10;
         A10.crc2.lineTo(x - 10, y + 40);
         A10.crc2.closePath();
         A10.crc2.stroke();
-        A10.crc2.fillStyle = color;
-        A10.crc2.fill();
-    }
-    // Function drawSnowflake
-    function drawSnowflake(x, y, color) {
-        A10.crc2.beginPath();
-        A10.crc2.arc(x, y, 2, 0, 2 * Math.PI);
-        A10.crc2.closePath();
         A10.crc2.fillStyle = color;
         A10.crc2.fill();
     }
