@@ -55,34 +55,24 @@ var A10;
         for (let i = 0; i < 3; i++) {
             cloud[i] = new A10.CloudInfo(330 + Math.random() * 130, 30 + Math.random() * 200);
         }
-        /* 2 B�ume an zuf�lliger Position
-           for (let i: number = 0; i < 2; i++) {
-               let x: number = 80 + Math.random() * 100;
-               let y: number = 230 + Math.random() * 110;
-               drawTree(x, y, "#5a924f");
-           } */
-        // 2 B�ume an zuf�lliger Position
-        for (let i = 0; i < 2; i++) {
-            let x = 120 + Math.random() * 100;
-            let y = 300 + Math.random() * 110;
+        // 4 B�ume an zuf�lliger Position
+        for (let i = 0; i < 8; i++) {
+            let x = 120 + Math.random() * 150;
+            let y = 300 + Math.random() * 130;
             drawTree(x, y, "#5a924f");
-        }
-        // 2 B�ume in einer Reihe
-        for (let i = 0; i < 2; i++) {
-            drawTree(140 + i * 60, 420, "#5a924f");
         }
         // 160 Schneeflocken an zuf�lliger Position
         for (let i = 0; i < 160; i++) {
             snow[i] = new A10.SnowInfo(5 + Math.random() * 300, 20 + Math.random() * 480);
         }
-        // Kinder
+        // Kinder !!FEHLER!!, ich wei� nicht wieso nur 1 Kind erscheint obwohl ich 15 eingegeben habe....
         for (let i = 0; i < 15; i++) {
             kids[i] = new A10.KidsInfo(0, 250, "hsl(" + Math.random() * 360 + ", 100%, 50%)", "hsl(" + Math.random() * 360 + ", 100%, 50%)");
         }
         img = A10.crc2.getImageData(0, 0, 300, 480);
         animate();
     }
-    //------------- Funktionen  
+    //------------- Funktion 
     // Function drawTree
     function drawTree(x, y, color) {
         A10.crc2.beginPath();

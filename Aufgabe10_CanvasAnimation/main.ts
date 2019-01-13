@@ -81,25 +81,14 @@ function init(): void {
            } 
     
     
-     /* 2 Bäume an zufälliger Position
-        for (let i: number = 0; i < 2; i++) {
-            let x: number = 80 + Math.random() * 100;
-            let y: number = 230 + Math.random() * 110;
-            drawTree(x, y, "#5a924f");
-        } */
-    
-    // 2 Bäume an zufälliger Position
-        for (let i: number = 0; i < 2; i++) {
-            let x: number = 120 + Math.random() * 100;
-            let y: number = 300 + Math.random() * 110;
+    // 4 Bäume an zufälliger Position
+        for (let i: number = 0; i < 8; i++) {
+            let x: number = 120 + Math.random() * 150;
+            let y: number = 300 + Math.random() * 130;
             drawTree(x, y, "#5a924f");
         }
     
     
-     // 2 Bäume in einer Reihe
-        for (let i: number = 0; i < 2; i++) {
-            drawTree(140 + i * 60, 420, "#5a924f");
-        }
     
     
       // 160 Schneeflocken an zufälliger Position
@@ -109,7 +98,8 @@ function init(): void {
            }
     
     
-    // Kinder
+    // Kinder !!FEHLER!!, ich weiß nicht wieso nur 1 Kind erscheint obwohl ich 15 eingegeben habe....
+    
         for (let i: number = 0; i < 15; i++) {
             kids[i] = new KidsInfo (0, 250,
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)",
@@ -125,10 +115,8 @@ function init(): void {
       animate();
     }
     
-//------------- Funktionen  
-    
-
-    
+//------------- Funktion 
+   
     
 // Function drawTree
     
@@ -144,7 +132,6 @@ function init(): void {
             
     }
     
-
     
 //------------ Animation 
     
@@ -176,12 +163,5 @@ function init(): void {
         window.setTimeout(animate, 10);
         }
     }
-
-
-
-
-    
- 
-
 
 
