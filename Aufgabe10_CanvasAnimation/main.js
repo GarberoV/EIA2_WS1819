@@ -10,7 +10,8 @@ nicht kopiert und auch nicht diktiert.
 var A10;
 (function (A10) {
     window.addEventListener("load", init);
-    let kids = [];
+    let kidsUp = [];
+    let kidsDown = [];
     let snow = [];
     let cloud = [];
     let img;
@@ -55,7 +56,7 @@ var A10;
         for (let i = 0; i < 3; i++) {
             cloud[i] = new A10.CloudInfo(330 + Math.random() * 130, 30 + Math.random() * 200);
         }
-        // 4 B�ume an zuf�lliger Position
+        // 8 B�ume an zuf�lliger Position
         for (let i = 0; i < 8; i++) {
             let x = 120 + Math.random() * 150;
             let y = 300 + Math.random() * 130;
@@ -65,9 +66,13 @@ var A10;
         for (let i = 0; i < 160; i++) {
             snow[i] = new A10.SnowInfo(5 + Math.random() * 300, 20 + Math.random() * 480);
         }
-        // Kinder !!FEHLER!!, ich wei� nicht wieso nur 1 Kind erscheint obwohl ich 15 eingegeben habe....
-        for (let i = 0; i < 15; i++) {
-            kids[i] = new A10.KidsInfo(0, 250, "hsl(" + Math.random() * 360 + ", 100%, 50%)", "hsl(" + Math.random() * 360 + ", 100%, 50%)");
+        // Kinder runter 
+        for (let i = 0; i < 6; i++) {
+            kidsDown[i] = new A10.KidsDownInfo(0, 250, "hsl(" + Math.random() * 360 + ", 100%, 50%)", "hsl(" + Math.random() * 360 + ", 100%, 50%)");
+        }
+        // Kinder hoch
+        for (let i = 0; i < 6; i++) {
+            kidsUp[i] = new A10.KidsUpInfo(300, 420, "hsl(" + Math.random() * 360 + ", 100%, 50%)", "hsl(" + Math.random() * 360 + ", 100%, 50%)");
         }
         img = A10.crc2.getImageData(0, 0, 300, 480);
         animate();
@@ -98,10 +103,15 @@ var A10;
             let cl = cloud[i];
             cl.moveCloudInfo();
         }
-        // Kinder
-        for (let i = 0; i < kids.length; i++) {
-            let ki = kids[i];
-            ki.moveKidsInfo();
+        // Kinder hoch
+        for (let i = 0; i < kidsUp.length; i++) {
+            let kid = kidsUp[i];
+            kid.moveKidsUpInfo();
+        }
+        // Kinder runter
+        for (let i = 0; i < kidsDown.length; i++) {
+            let ki = kidsDown[i];
+            ki.moveKidsDownInfo();
         }
         window.setTimeout(animate, 10);
     }

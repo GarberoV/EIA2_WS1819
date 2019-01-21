@@ -14,7 +14,8 @@ namespace A10 {
         export let crc2: CanvasRenderingContext2D;
         window.addEventListener("load", init);
        
-        let kids: KidsInfo[] = [];
+        let kidsUp: KidsUpInfo[] = [];
+        let kidsDown: KidsDownInfo[] = [];
         let snow: SnowInfo[] = [];
         let cloud: CloudInfo[] = [];
         let img: ImageData;
@@ -81,7 +82,7 @@ function init(): void {
            } 
     
     
-    // 4 Bäume an zufälliger Position
+    // 8 Bäume an zufälliger Position
         for (let i: number = 0; i < 8; i++) {
             let x: number = 120 + Math.random() * 150;
             let y: number = 300 + Math.random() * 130;
@@ -98,14 +99,25 @@ function init(): void {
            }
     
     
-    // Kinder !!FEHLER!!, ich weiß nicht wieso nur 1 Kind erscheint obwohl ich 15 eingegeben habe....
+    // Kinder runter 
     
-       for (let i: number = 0; i < 15; i++) {
-            kids[i] = new KidsInfo (0, 250,
+       for (let i: number = 0; i < 6; i++) {
+            kidsDown[i] = new KidsDownInfo (0, 250,
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)",
                                           "hsl(" + Math.random() * 360 + ", 100%, 50%)");
                                          
             }
+    
+    
+    // Kinder hoch
+    
+    for (let i: number = 0; i < 6; i++) {
+            kidsUp[i] = new KidsUpInfo (300, 420,
+                                          "hsl(" + Math.random() * 360 + ", 100%, 50%)",
+                                          "hsl(" + Math.random() * 360 + ", 100%, 50%)");
+                                         
+            }
+    
 
    
     
@@ -153,10 +165,16 @@ function init(): void {
             cl.moveCloudInfo();
         }
        
-       // Kinder
-       for (let i: number = 0; i < kids.length; i++) {
-           let ki: KidsInfo = kids[i];
-           ki.moveKidsInfo();
+       // Kinder hoch
+       for (let i: number = 0; i < kidsUp.length; i++) {
+           let kid: KidsUpInfo = kidsUp[i];
+           kid.moveKidsUpInfo();
+         }
+       
+       // Kinder runter
+       for (let i: number = 0; i < kidsDown.length; i++) {
+           let ki: KidsDownInfo = kidsDown[i];
+           ki.moveKidsDownInfo();
          }
        
        
